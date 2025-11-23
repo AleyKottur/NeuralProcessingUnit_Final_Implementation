@@ -100,12 +100,17 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);SC_ALLOW_DEPRECATED_IEEE_API</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SYSTEMC_HOME)\src;%(AdditionalInputDirectory)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/vmg</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SYSTEMC_MSVC)\SystemC\$(IntDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SYSTEMC_MSVC)\SystemC\x64\Debug\SystemC.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,11 +133,13 @@
   <ItemGroup>
     <ClInclude Include="bus_module.h" />
     <ClInclude Include="config.h" />
+    <ClInclude Include="core.h" />
     <ClInclude Include="ioc_module.h" />
     <ClInclude Include="memory_modules.h" />
     <ClInclude Include="nwc_controller.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="input.txt" />
     <Text Include="weights.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
