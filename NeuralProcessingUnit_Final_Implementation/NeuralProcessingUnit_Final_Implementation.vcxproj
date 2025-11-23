@@ -126,11 +126,11 @@
     <ClCompile Include="NeuralProcessingUnit_Final_Implementation.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="compute_modules.h" />
+    <ClInclude Include="bus_module.h" />
     <ClInclude Include="config.h" />
-    <ClInclude Include="core_and_controller.h" />
     <ClInclude Include="ioc_module.h" />
     <ClInclude Include="memory_modules.h" />
+    <ClInclude Include="nwc_controller.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="weights.txt" />

@@ -20,19 +20,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="compute_modules.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="config.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="core_and_controller.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="ioc_module.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="memory_modules.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="nwc_controller.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="bus_module.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

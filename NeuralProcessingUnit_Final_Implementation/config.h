@@ -4,31 +4,34 @@
 #include <systemc.h>
 #include <vector>
 #include <cmath>
-#include <iostream>
-#include <fstream>
-#include <sstream>
+#include <iomanip>
 
-// --- Аппаратные ограничения нейропроцессора ---
-#define CLK_PERIOD_NS 10 // Период тактового сигнала в наносекундах (100 МГц)
+#define CLK_PERIOD_NS 10
+const int NUM_CORES = 4;
+const int MEM_SEGMENT_SIZE = 0x10000;
 
-// Параметры параллелизма и памяти
-const int NUM_CORES = 4; // Количество ядер для параллельных вычислений
-const int GLOBAL_MEMORY_SIZE = 1024 * 1024; // Размер общей памяти (в float-ах)
-const int LOCAL_MEMORY_SIZE = 16 * 1024; // Размер локальной памяти на ядро (в float-ах)
+// Адресная карта
+const int ADDR_I_BASE = 0x00000;
+const int ADDR_W_BASE = 0x10000;
+const int ADDR_B_BASE = 0x20000;
+const int ADDR_O_BASE = 0x30000;
 
-// Параметры LUT (Look-Up Table) для Сигмоиды
-const int LUT_SIZE = 256;
-const float LUT_MIN_VAL = -10.0f;
-const float LUT_MAX_VAL = 10.0f;
+// Ограничение размера локальной памяти (LM) в словах
+const int LOCAL_MEM_SIZE = 1024;
 
-// Общие типы данных и интерфейсы
-typedef sc_uint<20> addr_t; // Тип адреса
-typedef float data_t;       // Тип данных (float)
+typedef int addr_t;
+typedef float data_t;
 
-// Интерфейс для доступа к общей памяти (Шине)
-struct Bus_Master_if : public sc_interface {
-    virtual bool write_data(addr_t addr, data_t data) = 0;
-    virtual bool read_data(addr_t addr, data_t& data) = 0;
+class Bus_if : public virtual sc_interface {
+public:
+    virtual bool bus_write(addr_t addr, data_t data) = 0;
+    virtual bool bus_read(addr_t addr, data_t& data) = 0;
 };
 
-#endif // CONFIG_H
+// Интерфейс для LUT (теперь внутренний для ядра, но оставим интерфейс)
+class LUT_if : public virtual sc_interface {
+public:
+    virtual data_t get_activation(data_t input) = 0;
+};
+
+#endif
