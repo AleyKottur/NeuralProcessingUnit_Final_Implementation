@@ -4,9 +4,6 @@
 #include "config.h"
 #include <fstream>
 #include <string>
-#include <amsi.h>
-
-// TEST
 
 SC_MODULE(IO_Controller) {
     sc_out<bool> config_ready_o;
