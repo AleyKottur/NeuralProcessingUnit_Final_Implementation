@@ -5,6 +5,8 @@
 #include <fstream>
 #include <string>
 
+// Изменение кода (просто комментарий)
+
 SC_MODULE(IO_Controller) {
     sc_out<bool> config_ready_o;
     sc_port<Bus_if> bus_port;
