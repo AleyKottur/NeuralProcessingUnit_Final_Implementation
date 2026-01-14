@@ -52,5 +52,8 @@
     <Text Include="input491053.txt">
       <Filter>Файлы заголовков</Filter>
     </Text>
+    <Text Include="Input Specification.txt">
+      <Filter>Исходные файлы</Filter>
+    </Text>
   </ItemGroup>
 </Project>

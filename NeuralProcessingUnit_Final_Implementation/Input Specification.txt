@@ -1,0 +1,19 @@
+Спецификация входных данных на вход процессора (рус.)
+
+# Архитектура сети (<кол-во слоёв> <<кол-во нейронов первого слоя>…<кол-во нейрона последнего слоя>>)
+# Веса первого слоя синапсов
+# Смещения первого слоя синапсов
+…
+# Веса последнего слоя синапсов
+# Смещения последнего слоя синапсов
+# Вход нейронной сети
+
+Specification of input data to the processor input (Eng.	)
+
+# Network architecture (<number of layers> <<number of neurons of the first layer>...<number of neurons of the last layer>>)
+# Weights of the first layer of synapses
+# Displacements of the first layer of synapses
+...
+# Weights of the last layer of synapses
+# Offsets of the last layer of synapses
+# Neural network input
