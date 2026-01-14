@@ -23,7 +23,7 @@ SC_MODULE(RAM_Module), public Memory_if{
     void debug_dump(addr_t start_addr, int count, const char* label) {}
 };
 
-// LUT Module
+// LUT
 SC_MODULE(LUT_Module), public LUT_if{
     data_t lut_table[256];
     const float LUT_MIN = -10.0f;

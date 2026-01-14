@@ -19,7 +19,7 @@ SC_MODULE(Core) {
     // Порт к шине
     sc_port<Bus_if> bus_port;
 
-    // Внутренний LUT
+    // LUT
     LUT_Module* internal_lut;
 
     // Локальная память

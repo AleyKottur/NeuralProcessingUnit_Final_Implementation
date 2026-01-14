@@ -28,7 +28,7 @@ public:
     virtual bool bus_read(addr_t addr, data_t& data) = 0;
 };
 
-// Интерфейс для LUT (теперь внутренний для ядра, но оставим интерфейс)
+// Интерфейс для LUT
 class LUT_if : public virtual sc_interface {
 public:
     virtual data_t get_activation(data_t input) = 0;

@@ -19,7 +19,7 @@ int sc_main(int argc, char* argv[]) {
     RAM_Module mem_B("Memory_Biases");
     RAM_Module mem_O("Memory_Outputs");
 
-    // Шина (BUS)
+    // Шина
     SystemBus bus("SystemBus");
     bus.clk_i(clk);
 
@@ -36,7 +36,7 @@ int sc_main(int argc, char* argv[]) {
     ioc.set_dims_ptr(&layer_info);
     nwc.set_dims_ptr(&layer_info);
 
-    // Ядра (Cores)
+    // Ядра
     Core* cores[NUM_CORES];
     for (int i = 0; i < NUM_CORES; ++i) {
         char name[20];

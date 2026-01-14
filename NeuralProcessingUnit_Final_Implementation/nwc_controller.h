@@ -17,7 +17,7 @@ SC_MODULE(NW_Controller) {
 
     sc_in<bool> core_done[NUM_CORES];
 
-    // Доступ к конфигурации
+    // Конфигурация
     std::vector<int>* layer_dims_ref;
 
     SC_CTOR(NW_Controller) {
