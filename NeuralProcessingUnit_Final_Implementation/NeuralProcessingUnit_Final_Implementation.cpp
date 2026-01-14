@@ -100,5 +100,10 @@ int sc_main(int argc, char* argv[]) {
     }
 
     for (int i = 0; i < NUM_CORES; i++) delete cores[i];
+    
+    sc_time clk_time_all = sc_time_stamp();
+    long long clk_cycles = clk_time_all.to_seconds() / sc_time(CLK_PERIOD_NS, SC_NS).to_seconds();
+    printf("CLK: %lld\n", clk_cycles);
+
     return 0;
 }

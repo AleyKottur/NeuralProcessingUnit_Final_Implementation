@@ -23,7 +23,7 @@ SC_MODULE(IO_Controller) {
         config_ready_o.write(false);
         wait(10, SC_NS);
 
-        std::ifstream file("input.txt");
+        std::ifstream file("input49222853.txt");
         if (!file.is_open()) {
             SC_REPORT_ERROR("IOc", "Cannot open input.txt");
             return;

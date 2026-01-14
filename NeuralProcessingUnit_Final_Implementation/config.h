@@ -7,7 +7,7 @@
 #include <iomanip>
 
 #define CLK_PERIOD_NS 10
-const int NUM_CORES = 4;
+const int NUM_CORES = 8;
 const int MEM_SEGMENT_SIZE = 0x10000;
 
 // Адресная карта

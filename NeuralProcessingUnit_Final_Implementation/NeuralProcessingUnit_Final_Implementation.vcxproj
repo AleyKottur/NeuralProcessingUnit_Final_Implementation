@@ -139,7 +139,9 @@
     <ClInclude Include="nwc_controller.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="input.txt" />
+    <Text Include="input491053.txt" />
+    <Text Include="input49173.txt" />
+    <Text Include="input49222853.txt" />
     <Text Include="weights.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -43,7 +43,13 @@
     <Text Include="weights.txt">
       <Filter>Исходные файлы</Filter>
     </Text>
-    <Text Include="input.txt">
+    <Text Include="input49222853.txt">
+      <Filter>Файлы заголовков</Filter>
+    </Text>
+    <Text Include="input49173.txt">
+      <Filter>Файлы заголовков</Filter>
+    </Text>
+    <Text Include="input491053.txt">
       <Filter>Файлы заголовков</Filter>
     </Text>
   </ItemGroup>
